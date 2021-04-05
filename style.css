@@ -1,3 +1,10 @@
-/* body {
-
-} */
+body {
+    /* background-color: pink; */
+    --backgroundcolor: #F2E9BD;	
+    --highlightcolor:  #F2EFEB;
+    --headercolor: #027373;
+    --footercolor:#A7F2D7;
+    --bordercolor: #F2D57E;
+    --textcolor: black;
+    --whilecolor: white;
+}
