@@ -16,12 +16,16 @@ header {
     background-color: var(--headercolor);
 }
 
+footer {
+    background-color: var(--footercolor);
+}
+
 
 
 .container{
     display: grid;
-    width: 100VW;
-    height: auto;
+    height: 100vh;
+    width: 100vw;
     grid-template-areas: "layout_1 layout_1 layout_1 layout_1"
                          "layout_8 layout_8 layout_8 layout_8"
                          "layout_3 layout_2 layout_2 layout_4"
@@ -33,6 +37,40 @@ header {
     
     border: 1px solid navy;
     padding: 4px;
+    text-align: center;
+}
+
+
+@media screen and (max-width: 1000px)  {
+    .container {
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr ;
+
+        grid-template-areas: "layout_1 layout_1"
+                             "layout_8 layout_8"
+                             "layout_3 layout_4"
+                             "layout_2 layout_2"
+                             "layout_5 layout_6"
+                             "layout_7 layout_7";
+    }
+    
+}
+
+@media screen and (max-width: 550px)  {
+    .container {
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr ;
+
+        grid-template-areas: "layout_1"
+                             "layout_8"
+                             "layout_3"
+                             "layout_2"
+                             "layout_4"
+                             "layout_5"
+                             "layout_6"
+                             "layout_7";
+    }
+    
 }
 
 .container > #layout_1 {
@@ -43,48 +81,34 @@ header {
 .container > #layout_2 {
     grid-area: layout_2;
     background-color: green;
-    width: 100VW;
-    height: auto;
 }
 
 .container > #layout_3 {
     grid-area: layout_3;
     background-color: blue;
-    width: 100VW;
-    height: auto;
 }
 
 .container > #layout_4 {
     grid-area: layout_4;
     background-color: yellow;
-    width: 100VW;
-    height: auto;
 }
 
 .container > #layout_5 {
     grid-area: layout_5;
     background-color: gray;
-    width: 100VW;
-    height: auto;
 }
 
 .container > #layout_6 {
     grid-area: layout_6;
     background-color: purple;
-    width: 100VW;
-    height: auto;
 }
 
 .container > #layout_7 {
     grid-area: layout_7;
     background-color: pink;
-    width: 100VW;
-    height: auto;
 }
 
 .container > #layout_8 {
     grid-area: layout_8;
     background-color: orange;
-    width: 100VW;
-    height: auto;
 }
