@@ -1,0 +1,119 @@
+@import "table.css";
+@import "general_1200.css";
+html {
+    font-size: 16px;
+}
+
+body {
+    /* background-color: pink; */
+    margin-top:0;
+    margin-bottom:0;
+    --body-padding:3rem;
+    --padding-intern:2%;
+
+
+    --backgroundcolor: #F2E9BD;	
+    --highlightcolor:  #F2EFEB;
+    --headercolor: #027373;
+    --footercolor:#A7F2D7;
+    --bordercolor: #F2D57E;
+    --textcolor: black;
+    --whilecolor: white;
+
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+
+    padding-left: var(--body-padding);
+    padding-right: var(--body-padding);
+    padding-top:0;
+    padding-bottom:0;
+
+
+    min-width: 330px;
+}
+
+h1 {
+    font-size: 3rem;
+}
+
+main {
+    --main-border:2px solid var(--highlightcolor);
+    background:var(--backgroundcolor);
+
+    border-left:var(--main-border);
+    border-right:var(--main-border);
+
+}
+
+header {
+    background-color: var(--headercolor);
+    padding-left:var(--padding-intern);
+    padding-right:var(--padding-intern);
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+}
+
+footer {
+    background-color: var(--footercolor);
+    padding-left:var(--padding-intern);
+    padding-right:var(--padding-intern);
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+}
+
+
+
+.grid{
+    display: grid;
+    grid-template-areas: "layout_1 layout_1 layout_1 layout_1"
+                         "layout_8 layout_8 layout_8 layout_8"
+                         "layout_3 layout_2 layout_2 layout_4"
+                         "layout_5 layout_6 layout_7 layout_7";
+    
+    padding: var(--padding-intern) ;
+    
+    grid-gap: 2rem;
+}
+
+
+.grid > #layout_1 {
+    grid-area: layout_1;
+    height: 100%;
+    background-color: var(--highlightcolor);
+}
+
+.grid > #layout_2 {
+    grid-area: layout_2;
+    background-color: var(--highlightcolor);
+}
+
+.grid > #layout_3 {
+    grid-area: layout_3;
+    background-color: var(--highlightcolor);
+}
+
+.grid > #layout_4 {
+    grid-area: layout_4;
+    background-color: var(--highlightcolor);
+}
+
+.grid > #layout_5 {
+    grid-area: layout_5;
+    background-color: var(--highlightcolor);
+}
+
+.grid > #layout_6 {
+    grid-area: layout_6;
+    background-color: var(--highlightcolor);
+}
+
+.grid > #layout_7 {
+    grid-area: layout_7;
+    background-color: var(--highlightcolor);
+}
+
+.grid > #layout_8 {
+    grid-area: layout_8;
+    background-color: var(--highlightcolor);
+}

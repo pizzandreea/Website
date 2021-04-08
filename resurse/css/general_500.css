@@ -1,0 +1,16 @@
+html {
+    font-size: 11px;
+}
+
+body {
+    --body-padding:0px;
+}
+
+h1 {
+    text-align: center;
+}
+
+.grid {
+    display: block;
+}
+
