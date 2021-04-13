@@ -169,8 +169,30 @@ nav{
     //         animation: rotateX 300ms (num * 60ms) ease-in-out forwards
     //         transform-origin: top center
     //     }
-    
-    
+
+.dropdown{
+    ul{
+        li{
+            .item-1{
+                animation: rotateX 300ms (1 * 60ms) ease-in-out forwards;
+                transform-origin: top center;
+
+            }
+            .item-2{
+                animation: rotateX 300ms (2 * 60ms) ease-in-out forwards;
+                transform-origin: top center;
+
+            }
+
+            .item-3{
+                animation: rotateX 300ms (3 * 60ms) ease-in-out forwards;
+                transform-origin: top center;
+
+            }
+        }
+    }
+}
+
 
 @keyframes rotateX {
     0% {

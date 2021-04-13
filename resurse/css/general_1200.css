@@ -7,6 +7,9 @@ body {
     margin:0;
 }
 
+.home{
+    display: none;
+}
 .grid {
 
     grid-template-areas: "welcome  welcome"

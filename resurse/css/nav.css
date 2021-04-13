@@ -1,14 +1,13 @@
 body{
   --inaltime-menu:3rem;
 }
-
 nav ul.menu ul {
   display: none;
   position: absolute;
   width: 100%;
 }
 
-nav{
+nav {
   height: var(--inaltime-menu);
   width: 100%;
   top: 0;
@@ -20,7 +19,7 @@ nav{
 
 nav ul.menu>li {
   float: left;
-  width: 14%;
+  width: 16.66%;
   position: relative;
 }
 
@@ -50,14 +49,6 @@ nav ul.menu li a,nav ul.menu li div {
   outline: 2px solid var(--headercolor);
 }
 
-ul.menu a:hover,ul.menu div:hover {
-  background: var(--cl-marcare);
-}
-
-nav ul.menu>li>a:hover {
-  text-shadow: 0px 0px;
-}
-
 ul.menu a,ul.menu div {
   transition: background 700ms linear;
 }
@@ -67,13 +58,35 @@ nav ul.menu>li>a {
   transition: text-shadow 500ms linear;
 }
 
+nav ul.menu>li>a:hover {
+  text-shadow: 0px 0px;
+}
+
+
+ul.menu a:hover,ul.menu div:hover {
+  background: var(--cl-marcare);
+  font-stretch: extra-expanded;
+}
+
+
+nav ul.menu>li>ul{
+  height: 0;
+}
+
 nav ul.menu>li:hover>ul {
   display: block;
-  animation-name: rotateX;
+  animation-name: scaleHeight;
   animation-iteration-count: 1;
   animation-duration: 0.7s;
   animation-fill-mode: forwards;
   animation-timing-function: linear;
+  /* height: 50%; */
+}
+
+
+
+.dropdown ul li:hover{
+  text-decoration: underline 2px;
 }
 
 #ch_menu {
@@ -93,17 +106,15 @@ nav ul.menu>li:hover>ul {
 }
 
 
-@keyframes rotateX {
+@keyframes scaleHeight {
   0% {
     opacity: 0;
-    transform: rotateX(-90deg);
-  }
-  50% {
-    transform: rotateX(-20deg);
+    transform: scaleY(0);
+    
   }
   100% {
     opacity: 1;
-    transform: rotateX(0deg);
+    transform: scaleY(1);
   }
 }
 

@@ -1,137 +1,244 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="description" content="Petshop Rare Birds, Accesories and Quizes">
-        <meta name="keywords" content="Petshop, Rare, Bird, Quiz, Extinct, Conservation">
-        <meta name="author" content="Ciurescu Andreea Florina">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>On the brink</title>
-        <link rel="shortcut icon" type="image/jpg" href="https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/120/twitter/259/dove_1f54a.png"/>
-        <link rel="stylesheet" href="resurse\css\general.css"  type="text/css"/>
-        <link rel="stylesheet" href="resurse\css\general_1200.css" type="text/css" media="screen and (max-width:1200px)"/>
-        <link rel="stylesheet" href="resurse\css\general_500.css" type="text/css" media="screen and (max-width:500px)"/>
-        <link rel="stylesheet" href="resurse\css\nav_500.css" type="text/css" media="screen and (max-width:650px)"/>
-    </head>
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="description"
+      content="Petshop Rare Birds, Accesories and Quizes"
+    />
+    <meta
+      name="keywords"
+      content="Petshop, Rare, Bird, Quiz, Extinct, Conservation"
+    />
+    <meta name="author" content="Ciurescu Andreea Florina" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>On the brink</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200&family=Orelega+One&display=swap"
+      rel="stylesheet"
+    />
     
-    <body>
-    
-        <header >
-            <h1 id = "title">On the brink</h1>
-        </header>
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.12.1/css/all.css"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="shortcut icon"
+      type="image/jpg"
+      href="https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/120/twitter/259/dove_1f54a.png"
+    />
+    <link rel="stylesheet" href="resurse\css\general.css" type="text/css" />
+    <link
+      rel="stylesheet"
+      href="resurse\css\general_1200.css"
+      type="text/css"
+      media="screen and (max-width:1200px)"
+    />
+    <link
+      rel="stylesheet"
+      href="resurse\css\general_500.css"
+      type="text/css"
+      media="screen and (max-width:500px)"
+    />
+    <link
+      rel="stylesheet"
+      href="resurse\css\nav_500.css"
+      type="text/css"
+      media="screen and (max-width:650px)"
+    />
+  </head>
 
-        <nav>
-            <label id="small_menu" for="ch_menu">
-                <img src="resurse\imagini\Hamburger_icon.svg.png" alt="menu">
-            </label>
-            <input id="ch_menu" type="checkbox">
-            <ul class="menu">
-                <li class="dropdown"><div>Home</div>
-                    <ul>
-                        <li class="item-1"><a href="#welcome">Welcome</a></li>
-                        <li class="item-2"><a href="#about">About</a></li>
-                        <li class="item-3"><a href="#table">Table</a></li>
-                    </ul>
-                </li>
-                <li><a href="#">Register</a></li>
-                <li><a href = "#">Quiz</a></li>
-                <li><a href = "#">Info</a></li>
-                <li class="dropdown"><div>Shop</div>
-                    <ul>
-                        <li class="item-1"><a href = "#">Birds</a></li>
-                        <li class="item-2"><a href = "#">Accessories</a></li>
-                        <li class="item-3"><a href = "#">Food and treats</a></li>
-                    </ul>
-                </li>
-                <li><a href="#">Contact</a></li>
-            </ul>
-        </nav>
-        
-        <main>
-        <div class="grid">
+  <body>
+    <header>
+      <h1 id="title">On the brink</h1>
+    </header>
 
-            <section id="welcome">
-                <h2>Welcome to our website!</h2>
-                <p class="description">We are here to inform you about the rarest birds in the world and how you can help prevent their extintion.</p>
-                <p class="description">On our website you can find:</p>
-                <div class="info"><div>Bird Facts</div><div>Extinction</div><div>Quizes</div><div>Rescued Birds</div><div>Beautiful Photos of Birds</div></div>
-            
-                
-            </section>
+    <nav>
+      <label id="small_menu" for="ch_menu">
+        <img src="resurse\imagini\Hamburger_icon.svg.png" alt="menu" />
+      </label>
+      <input id="ch_menu" type="checkbox" />
+      <ul class="menu">
+        <li class="dropdown">
+          <div>
+            <i class="fas fa-home fa-lg icon"></i><span class="home">Home</span>
+          </div>
+          <ul>
+            <li class="item-1"><a href="#welcome">Welcome</a></li>
+            <li class="item-2"><a href="#about">About</a></li>
+            <li class="item-3"><a href="#table">Table</a></li>
+          </ul>
+        </li>
+        <li><a href="#">Register</a></li>
+        <li><a href="#">Quiz</a></li>
+        <li><a href="#">Info</a></li>
+        <li class="dropdown">
+          <div>Shop</div>
+          <ul>
+            <li class="item-1"><a href="#">Birds</a></li>
+            <li class="item-2"><a href="#">Accessories</a></li>
+            <li class="item-3"><a href="#">Food</a></li>
+          </ul>
+        </li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+    </nav>
 
-            <div id="about">
-                <section>
-                    <h2>About us</h2>
-                    <img src="file:///C:/andreea/Documents/acte%20facultate/Sem%202/TW/Imagini/Flash.jpg" alt = "Huh?" width="200" height="300">
-                    <img src="file:///C:/andreea/Documents/acte%20facultate/Sem%202/TW/Imagini/Pithecophaga.jpg" alt = "Huh?" width="270" height="300">
-                    <img src="file:///C:/andreea/Documents/acte%20facultate/Sem%202/TW/Imagini/Rarest%20Macaw.jpg" alt = "Huh?" width="300" height="200">
-                    <img src="file:///C:/andreea/Documents/acte%20facultate/Sem%202/TW/Imagini/South%20Philippine%20Dwarf.jpg" alt = "Huh?" width="400" height="300">
-                    <img src="file:///C:/andreea/Documents/acte%20facultate/Sem%202/TW/Imagini/Todus%20Angustirostris.jpg" alt = "Huh?" width="200" height="300">
-                    <article>
-                        <h3> Our Motivation </h3>  
-                        <p>
-                            Here, we strive to have a personal relationship with every costumer. We invest time to advise you on proper bird care, training, breeding and nutrition - anything there is t to know. Our relationship with you is a personal one and we take your concerns seriously. We’re dedicated to creating a relationship with you that will keep you coming back time and time again. For more details, you can find us at our contact page.<strong> Stay informed!</strong>
-                        </p>
-                    </article>
-                    <article>
-                        <h3>Our promise</h3>
-                        <p>
-                            We ensure you that all pets are selected with <em>outstanding pet criteria</em> in mind. We review the overall health of each animal using our combined years of experience in the field, looking at such factors as age, size, coat, behaviour, unique markings, overall appearance and desirability as a <b>pet</b>.
-                        </p>
-                    </article>
-                </section>
-            </div>
+    <main>
+      <div class="grid">
+        <section id="welcome">
+          <h2>Welcome to our website!</h2>
+          <p class="description">
+            We are here to inform you about the rarest birds in the world and
+            how you can help prevent their extintion.
+          </p>
+          <p class="description">On our website you can find:</p>
+          <div class="info">
+            <div>Bird Facts</div>
+            <div>Extinction</div>
+            <div>Quizes</div>
+            <div>Rescued Birds</div>
+            <div>Beautiful Photos of Birds</div>
+          </div>
+        </section>
 
-            <div id="layout_3">
-                <h2>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sunt quas impedit odio dicta nihil molestiae in aspernatur delectus aut distinctio, exercitationem facere, doloribus reprehenderit! Perspiciatis earum commodi neque quasi deserunt.</h2>
-                <p></p>
-            </div>
+        <div id="about">
+          <section>
+            <h2>About us</h2>
+            <img
+              src="file:///C:/andreea/Documents/acte%20facultate/Sem%202/TW/Imagini/Flash.jpg"
+              alt="Huh?"
+              width="200"
+              height="300"
+            />
+            <img
+              src="file:///C:/andreea/Documents/acte%20facultate/Sem%202/TW/Imagini/Pithecophaga.jpg"
+              alt="Huh?"
+              width="270"
+              height="300"
+            />
+            <img
+              src="file:///C:/andreea/Documents/acte%20facultate/Sem%202/TW/Imagini/Rarest%20Macaw.jpg"
+              alt="Huh?"
+              width="300"
+              height="200"
+            />
+            <img
+              src="file:///C:/andreea/Documents/acte%20facultate/Sem%202/TW/Imagini/South%20Philippine%20Dwarf.jpg"
+              alt="Huh?"
+              width="400"
+              height="300"
+            />
+            <img
+              src="file:///C:/andreea/Documents/acte%20facultate/Sem%202/TW/Imagini/Todus%20Angustirostris.jpg"
+              alt="Huh?"
+              width="200"
+              height="300"
+            />
+            <article>
+              <h3>Our Motivation</h3>
+              <p>
+                Here, we strive to have a personal relationship with every
+                costumer. We invest time to advise you on proper bird care,
+                training, breeding and nutrition - anything there is t to know.
+                Our relationship with you is a personal one and we take your
+                concerns seriously. We’re dedicated to creating a relationship
+                with you that will keep you coming back time and time again. For
+                more details, you can find us at our contact page.<strong>
+                  Stay informed!</strong
+                >
+              </p>
+            </article>
+            <article>
+              <h3>Our promise</h3>
+              <p>
+                We ensure you that all pets are selected with
+                <em>outstanding pet criteria</em> in mind. We review the overall
+                health of each animal using our combined years of experience in
+                the field, looking at such factors as age, size, coat,
+                behaviour, unique markings, overall appearance and desirability
+                as a <b>pet</b>.
+              </p>
+            </article>
+          </section>
+        </div>
 
-            <div id="table">
-                <!-- tabel -->
-                                
-                <table id="t01">
-                    <tr>
-                        <th>Firstname</th>
-                        <th>Lastname</th> 
-                        <th>Age</th>
-                    </tr>
-                    <tr>
-                        <td>Jill</td>
-                        <td>Smith</td>
-                        <td>50</td>
-                    </tr>
-                    <tr>
-                        <td>Eve</td>
-                        <td>Jackson</td>
-                        <td>94</td>
-                    </tr>
-                    <tr>
-                        <td>John</td>
-                        <td>Doe</td>
-                        <td>80</td>
-                    </tr>
-                </table>
-                  
-            </div>
-            
-            <div id="layout_4">
-                <h2>Lorem ipsum dolor sit amet consectetur adipisicing elit. Est necessitatibus, maxime nobis voluptatibus mollitia adipisci praesentium odit repellat accusamus dolor exercitationem omnis sequi voluptate laboriosam velit. Nesciunt repudiandae doloribus vel!</h2>
-            </div>
-            <div id="layout_5">
-                <h2>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nam facere quae ratione totam voluptatibus at iste, odit a maxime ex reprehenderit repellendus nesciunt sint cum, tenetur quis et cumque eaque.</h2>
-            </div>
-            <div id="layout_6">
-                <h2>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolorem rem quaerat quam, fugiat iste distinctio dolorum nostrum aspernatur sapiente suscipit architecto nesciunt deleniti explicabo reiciendis excepturi ratione magni iure earum.</h2>
-            </div>
+        <div id="layout_3">
+          <h2>
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sunt quas
+            impedit odio dicta nihil molestiae in aspernatur delectus aut
+            distinctio, exercitationem facere, doloribus reprehenderit!
+            Perspiciatis earum commodi neque quasi deserunt.
+          </h2>
+          <p></p>
+        </div>
 
-            <div id="layout_7">
-                <h2>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Perferendis consequuntur necessitatibus, id dignissimos magnam debitis quibusdam tempore aliquam commodi iste aliquid voluptas mollitia, neque et nobis ipsa aut, fuga minus.</h2>
-            </div>
-            
+        <div id="table">
+          <!-- tabel -->
 
+          <table id="t01">
+            <tr>
+              <th>Firstname</th>
+              <th>Lastname</th>
+              <th>Age</th>
+            </tr>
+            <tr>
+              <td>Jill</td>
+              <td>Smith</td>
+              <td>50</td>
+            </tr>
+            <tr>
+              <td>Eve</td>
+              <td>Jackson</td>
+              <td>94</td>
+            </tr>
+            <tr>
+              <td>John</td>
+              <td>Doe</td>
+              <td>80</td>
+            </tr>
+          </table>
+        </div>
 
-            <!-- <section>
+        <div id="layout_4">
+          <h2>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Est
+            necessitatibus, maxime nobis voluptatibus mollitia adipisci
+            praesentium odit repellat accusamus dolor exercitationem omnis sequi
+            voluptate laboriosam velit. Nesciunt repudiandae doloribus vel!
+          </h2>
+        </div>
+        <div id="layout_5">
+          <h2>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nam facere
+            quae ratione totam voluptatibus at iste, odit a maxime ex
+            reprehenderit repellendus nesciunt sint cum, tenetur quis et cumque
+            eaque.
+          </h2>
+        </div>
+        <div id="layout_6">
+          <h2>
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolorem
+            rem quaerat quam, fugiat iste distinctio dolorum nostrum aspernatur
+            sapiente suscipit architecto nesciunt deleniti explicabo reiciendis
+            excepturi ratione magni iure earum.
+          </h2>
+        </div>
+
+        <div id="layout_7">
+          <h2>
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+            Perferendis consequuntur necessitatibus, id dignissimos magnam
+            debitis quibusdam tempore aliquam commodi iste aliquid voluptas
+            mollitia, neque et nobis ipsa aut, fuga minus.
+          </h2>
+        </div>
+
+        <!-- <section>
                 <h2 id = "home">Home and About us</h2>
                 <img src="https://i.pinimg.com/564x/95/6d/6c/956d6cd15427b9b65a4571d32368735d.jpg" alt = "Huh?" width="200" height="300">
                     <article>
@@ -202,29 +309,36 @@
                     
                 </section>
             </section> -->
-        </div>  
-        </main>
+      </div>
+    </main>
 
-        <footer>
-            
-            <p>Sign up to receive updates, special offers, program communications and other information from Rarest Birds.</p>
-            <small>Copyright &#169;2021 Rarest Birds, Inc. All rights reserved.</small>
-            <address>
-                Written by <a href="mailto:ciurescuandreea624@gmail.com">Ciurescu Andreea Florina</a>.<br>
-                Give us feedback at:<br>
-                <a href="mailto:ciurisecretbirds@gmail.com" target="_blank">onthebrink@gmail.com</a><br>
-                Give us a call at:<br>
-                <a href= "tel:07xxxxxxxx">07xxxxxxxx</a><br> 
+    <footer>
+      <p>
+        Sign up to receive updates, special offers, program communications and
+        other information from Rarest Birds.
+      </p>
+      <small
+        >Copyright &#169;2021 Rarest Birds, Inc. All rights reserved.</small
+      >
+      <address>
+        Written by
+        <a href="mailto:ciurescuandreea624@gmail.com"
+          >Ciurescu Andreea Florina</a
+        >.<br />
+        Give us feedback at:<br />
+        <a href="mailto:ciurisecretbirds@gmail.com" target="_blank"
+          >onthebrink@gmail.com</a
+        ><br />
+        Give us a call at:<br />
+        <a href="tel:07xxxxxxxx">07xxxxxxxx</a><br />
 
-                Our adress:<br>
-                Bucharest, Calea Victoriei no.1
-            </address>
-            <p>Website created on <time datetime="2021-03-06 01:00">06.03.2021.</time></p>
-            <a href = "#top">Go back up</a>
-            
-            
-        </footer>
-    
-    
-    </body>
+        Our adress:<br />
+        Bucharest, Calea Victoriei no.1
+      </address>
+      <p>
+        Website created on <time datetime="2021-03-06 01:00">06.03.2021.</time>
+      </p>
+      <a href="#top">Go back up</a>
+    </footer>
+  </body>
 </html>
