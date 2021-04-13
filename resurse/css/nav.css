@@ -1,0 +1,110 @@
+body{
+  --inaltime-menu:3rem;
+}
+
+nav ul.menu ul {
+  display: none;
+  position: absolute;
+  width: 100%;
+}
+
+nav{
+  height: var(--inaltime-menu);
+  width: 100%;
+  top: 0;
+  padding: 0;
+  background: cadetblue;
+  z-index: 10;
+  position: sticky;
+}
+
+nav ul.menu>li {
+  float: left;
+  width: 14%;
+  position: relative;
+}
+
+nav ul,nav li {
+  padding: 0;
+  margin: 0;
+}
+
+nav ul.menu li {
+  text-align: center;
+  list-style-type: none;
+  background: cadetblue;
+  cursor: pointer;
+}
+
+nav ul.menu li a,nav ul.menu li div {
+  text-decoration: none;
+  color: black;
+  display: block;
+  font-weight: bold;
+  /*inaltimea butonului si inaltimea liniei de text sunt identice 
+  pentru a centra textul pe verticala in element
+  - merge doar daca textul are o singura linie*/
+  height: var(--inaltime-menu);
+  line-height: var(--inaltime-menu);
+  width: 100%;
+  outline: 2px solid var(--headercolor);
+}
+
+ul.menu a:hover,ul.menu div:hover {
+  background: var(--cl-marcare);
+}
+
+nav ul.menu>li>a:hover {
+  text-shadow: 0px 0px;
+}
+
+ul.menu a,ul.menu div {
+  transition: background 700ms linear;
+}
+
+nav ul.menu>li>a {
+  text-shadow: 0px -15px transparent;
+  transition: text-shadow 500ms linear;
+}
+
+nav ul.menu>li:hover>ul {
+  display: block;
+  animation-name: rotateX;
+  animation-iteration-count: 1;
+  animation-duration: 0.7s;
+  animation-fill-mode: forwards;
+  animation-timing-function: linear;
+}
+
+#ch_menu {
+  display: none;
+}
+
+#small_menu {
+  height: var(--inaltime-menu);
+  /* width: auto; */
+  display: none;
+  /* height: var(--inaltime-meniu); */
+}
+
+#small_menu img {
+  height: 100%;
+  width: auto;
+}
+
+
+@keyframes rotateX {
+  0% {
+    opacity: 0;
+    transform: rotateX(-90deg);
+  }
+  50% {
+    transform: rotateX(-20deg);
+  }
+  100% {
+    opacity: 1;
+    transform: rotateX(0deg);
+  }
+}
+
+/*# sourceMappingURL=nav.css.map */
