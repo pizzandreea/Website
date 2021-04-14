@@ -1,0 +1,21 @@
+html {
+    font-size: 14px;
+}
+
+body {
+    --body-padding:1.5rem;
+    margin:0;
+}
+
+.home{
+    display: none;
+}
+.grid {
+
+    grid-template-areas: "welcome  welcome"
+                         "about    about"
+                         "layout_3 layout_4"
+                         "table    table"
+                         "layout_5 layout_6"
+                         "layout_7 layout_7";
+}
