@@ -65,7 +65,7 @@ nav ul.menu>li>a:hover {
 
 ul.menu a:hover,ul.menu div:hover {
   background: var(--cl-marcare);
-  /* font-stretch: extra-expanded; */
+
 }
 
 
