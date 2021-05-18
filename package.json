@@ -1,0 +1,27 @@
+{
+  "name": "proiect",
+  "version": "1.0.0",
+  "description": "Website about rare birds and petshop",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "Birds",
+    "Rare",
+    "Petshop",
+    "Extintion",
+    "Quiz",
+    "Extinct"
+  ],
+  "author": "Ciuresc Andreea Florina",
+  "license": "ISC",
+  "dependencies": {
+    "ejs": "^3.1.6",
+    "express": "^4.17.1",
+    "fs": "0.0.1-security",
+    "path": "^0.12.7",
+    "request-ip": "^2.1.3",
+    "sharp": "^0.28.2"
+  }
+}

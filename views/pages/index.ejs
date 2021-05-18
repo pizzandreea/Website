@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8" />
+    
     <meta
       name="description"
       content="Petshop Rare Birds, Accesories and Quizes"
@@ -10,81 +10,19 @@
       name="keywords"
       content="Petshop, Rare, Bird, Quiz, Extinct, Conservation"
     />
-    <meta name="author" content="Ciurescu Andreea Florina" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    
     <title>On the brink</title>
-    <link rel="preconnect" href="https://fonts.gstatic.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" />
 
-    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap" rel="stylesheet">
-
+    <%- include("../fragments/head") %>
     <link
       rel="stylesheet"
-      href="https://use.fontawesome.com/releases/v5.12.1/css/all.css"
-      crossorigin="anonymous"
-    />
-    <link
-      rel="shortcut icon"
-      type="image/jpg"
-      href="https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/120/twitter/259/dove_1f54a.png"
-    />
-    <link rel="stylesheet" href="resurse\css\general.css" type="text/css" />
-    <link
-      rel="stylesheet"
-      href="resurse\css\general_1200.css"
+      href="/resurse/css/galerie-animata.css"
       type="text/css"
-      media="screen and (max-width:1200px)"
-    />
-    <link
-      rel="stylesheet"
-      href="resurse\css\general_500.css"
-      type="text/css"
-      media="screen and (max-width:500px)"
-    />
-    <link
-      rel="stylesheet"
-      href="resurse\css\nav_500.css"
-      type="text/css"
-      media="screen and (max-width:650px)"
     />
   </head>
 
   <body>
-    <header>
-      <h1 id="title">On the brink</h1>
-    </header>
-
-    <nav>
-      <label id="small_menu" for="ch_menu">
-        <img src="resurse\imagini\Hamburger_icon.svg.png" alt="menu" />
-      </label>
-      <input id="ch_menu" type="checkbox" />
-      <ul class="menu">
-        <li class="dropdown">
-          <div>
-            <i class="fas fa-home fa-lg icon"></i><span class="home">Home</span>
-          </div>
-          <ul>
-            <li class="item-1"><a href="#welcome">Welcome</a></li>
-            <li class="item-2"><a href="#about">About</a></li>
-            <li class="item-3"><a href="#table">Table</a></li>
-          </ul>
-        </li>
-        <li><a href="#">Register</a></li>
-        <li><a href="#">Quiz</a></li>
-        <li><a href="#">Info</a></li>
-        <li class="dropdown">
-          <div>Shop</div>
-          <ul>
-            <li class="item-1"><a href="#">Birds</a></li>
-            <li class="item-2"><a href="#">Accessories</a></li>
-            <li class="item-3"><a href="#">Food</a></li>
-          </ul>
-        </li>
-        <li><a href="#contact">Contact</a></li>
-      </ul>
-    </nav>
-
+    <%- include("../fragments/header") %>
     <main>
       <div class="grid">
         <section id="welcome">
@@ -111,36 +49,28 @@
         <div id="about">
           <section>
             <h2>About us</h2>
-            <img
-              src="resurse/imagini/Flash.jpg"
-              alt="Huh?"
-              width="100"
-              height="150"
-            />
-            <img
-              src="resurse/imagini/Pithecophaga.jpg"
-              alt="Huh?"
-              width="135"
-              height="150"
-            />
-            <img
-              src="resurse/imagini/South Philippine Dwarf.jpg"
-              alt="Huh?"
-              width="150"
-              height="100"
-            />
-            <img
-              src="resurse/imagini/Rarest Macaw.jpg"
-              alt="Huh?"
-              width="200"
-              height="150"
-            />
-            <img
-              src="resurse/imagini/Todus Angustirostris.jpg"
-              alt="Huh?"
-              width="100"
-              height="150"
-            />
+            <!-- Gallery -->
+            <section id = "static-gallery">
+              <h2>Gallery</h2>
+              <%- include("../fragments/gallery") %>
+
+            </section>
+
+            <section id="sectiune-galerie-animata">
+              <h2>Galerie</h2>
+              <div id="galerie-animata" >
+                  <% for (let imag of locals.imagini){  %>
+                          <figure>
+                      <picture>
+                          <!-- il ia pe primul care se potriveste cu query-ul din media-->
+                          <source srcset="/<%-imag.mic%>" media="(max-width:700px)"/>
+                          <img src="/<%-imag.mare%>" alt="text"/>
+                      </picture>
+                      <figcaption><%-imag.descriere%></figcaption>
+                  </figure>
+                  <% } %>
+              </div>
+          </section>
             <article>
               <h3><i class="fas fa-atom fa-spin"></i> Our Motivation</h3>
               <p>
@@ -359,12 +289,8 @@
           </h2>
         </div>
         <div id="layout_6">
-          <h2>
-            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolorem
-            rem quaerat quam, fugiat iste distinctio dolorum nostrum aspernatur
-            sapiente suscipit architecto nesciunt deleniti explicabo reiciendis
-            excepturi ratione magni iure earum.
-          </h2>
+          <!-- date despre utilizatori -->
+          <%= adresa %>
         </div>
 
         <div id="layout_7">
@@ -376,52 +302,14 @@
           </h2>
         </div>
 
-        <!-- 
-            <section>
-              
-                
-            </section> -->
       </div>
-
+      
+     
       
 
     </main>
 
-    
-
-    <footer id="contact">
-      <p>
-        Sign up to receive updates, special offers, program communications and
-        other information from Rarest Birds.
-      </p>
-      <small
-        >Copyright &#169;2021 Rarest Birds, Inc. All rights reserved.</small
-      >
-      <address>
-        Written by
-        <a href="mailto:ciurescuandreea624@gmail.com"
-          >Ciurescu Andreea Florina</a
-        >.<br />
-        Give us feedback at:<br />
-        <a href="mailto:ciurisecretbirds@gmail.com" target="_blank"
-          >onthebrink@gmail.com</a
-        ><br />
-        Give us a call at:<br />
-        <a href="tel:07xxxxxxxx">07xxxxxxxx</a><br />
-
-        Our adress:<br />
-        Bucharest, Calea Victoriei no.1
-      </address>
-      <p>
-        Website created on <time datetime="2021-03-06 01:00">06.03.2021.</time>
-      </p>
-        <div id="box">
-          <a href="#top" title="go back up" id="link-top"><div id="triangle"></div></a>
-        </div>
-      
-      <!-- <a href="#top" title="go back up" id="link-top"><div id="triangle"></div>></a> -->
-    </footer>
-
+    <%- include("../fragments/footer") %>
     
   </body>
 
