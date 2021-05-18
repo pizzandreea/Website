@@ -1,0 +1,11 @@
+{
+  "name": "resurse",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "compile:sass":"node-sass sass/nav.scss css/nav.css -w"
+  },
+  "author": "",
+  "license": "ISC"
+}
