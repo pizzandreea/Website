@@ -1,0 +1,184 @@
+{
+    "cale_galerie":"resurse/imagini/galerie",
+    "imagini":[
+        {
+            "fisier":"bird1.jpg",
+            "descriere":"bird1",
+            "titlu":"bird1",
+            "timp":[9,17]
+        },
+        {
+            "fisier":"bird2.jpg",
+            "descriere":"bird2",
+            "titlu":"bird2",
+            "timp":[10, 18]
+        },
+        {
+            "fisier":"bird3.jpg",
+            "descriere":"bird3",
+            "titlu":"bird3",
+            "timp":[11, 19]
+        },
+        {
+            "fisier":"bird4.jpg",
+            "descriere":"bird4",
+            "titlu":"bird4",
+            "timp":[12, 20]
+        },
+        {
+            "fisier":"bird5.jpg",
+            "descriere":"bird5",
+            "titlu":"bird5",
+            "timp":[13, 19]
+        },
+        {
+            "fisier":"bird6.jpg",
+            "descriere":"bird6",
+            "titlu":"bird6",
+            "timp":[13, 22]
+        },
+        {
+            "fisier":"bird7.jpg",
+            "descriere":"bird7",
+            "titlu":"bird7",
+            "timp":[15, 20]
+        },
+        {
+            "fisier":"bird8.jpg",
+            "descriere":"bird8",
+            "titlu":"bird8",
+            "timp":[17, 23]
+        },
+        {
+            "fisier":"bird9.jpg",
+            "descriere":"bird99",
+            "titlu":"bird9",
+            "timp":[14, 4]
+        },
+        {
+            "fisier":"bird10.jpg",
+            "descriere":"bird10",
+            "titlu":"bird10",
+            "timp":[18, 4]
+        },
+        {
+            "fisier":"bird11.jpg",
+            "descriere":"bird10",
+            "titlu":"bird10",
+            "timp":[18, 8]
+        },
+        {
+            "fisier":"bird12.jpg",
+            "descriere":"bird10",
+            "titlu":"bird10",
+            "timp":[19, 10]
+        },
+        {
+            "fisier":"bird13.jpg",
+            "descriere":"bird10",
+            "titlu":"bird10",
+            "timp":[19, 16]
+        },
+        {
+            "fisier":"bird14.jpg",
+            "descriere":"bird10",
+            "titlu":"bird10",
+            "timp":[20, 13]
+        },
+        {
+            "fisier":"bird15.jpg",
+            "descriere":"bird10",
+            "titlu":"bird10",
+            "timp":[20, 8]
+        },
+        {
+            "fisier":"bird16.jpg",
+            "descriere":"bird10",
+            "titlu":"bird10",
+            "timp":[21, 7]
+        },
+        {
+            "fisier":"bird17.jpg",
+            "descriere":"bird10",
+            "titlu":"bird10",
+            "timp":[22, 11]
+        },
+        {
+            "fisier":"bird18.jpg",
+            "descriere":"bird10",
+            "titlu":"bird10",
+            "timp":[22, 17]
+        },
+        {
+            "fisier":"bird19.jpg",
+            "descriere":"bird10",
+            "titlu":"bird10",
+            "timp":[23, 13]
+        },
+        {
+            "fisier":"bird20.jpg",
+            "descriere":"bird10",
+            "titlu":"bird10",
+            "timp":[23, 17]
+        },
+        {
+            "fisier":"bird21.jpg",
+            "descriere":"bird10",
+            "titlu":"bird10",
+            "timp":[0, 14]
+        },
+        {
+            "fisier":"bird22.jpg",
+            "descriere":"bird10",
+            "titlu":"bird10",
+            "timp":[0, 10]
+        },
+        {
+            "fisier":"bird23.jpg",
+            "descriere":"bird10",
+            "titlu":"bird10",
+            "timp":[1, 20]
+        },
+        {
+            "fisier":"bird24.jpg",
+            "descriere":"bird24",
+            "titlu":"bird24",
+            "timp":[2, 18]
+        },
+        {
+            "fisier":"bird9.jpg",
+            "descriere":"bird99",
+            "titlu":"bird9",
+            "timp":[5, 13]
+        },
+        {
+            "fisier":"bird4.jpg",
+            "descriere":"bird4",
+            "titlu":"bird4",
+            "timp":[21, 10]
+        },
+        {
+            "fisier":"bird1.jpg",
+            "descriere":"bird1",
+            "titlu":"bird1",
+            "timp":[18,8]
+        },
+        {
+            "fisier":"bird24.jpg",
+            "descriere":"bird24",
+            "titlu":"bird24",
+            "timp":[19, 1]
+        },
+        {
+            "fisier":"bird21.jpg",
+            "descriere":"bird10",
+            "titlu":"bird10",
+            "timp":[15, 23]
+        }
+    ],
+
+    "empty":{
+            "fisier":"empty.png",
+            "descriere":""
+    }
+}
