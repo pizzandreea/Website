@@ -1,0 +1,91 @@
+$transformare_i:scale(1) !default;
+$transformare_f:scale(0.5) !default;
+$setare-server:black !default;
+@use 'sass:math';
+
+#sectiune-galerie-animata{
+	padding-left: var(--padding-intern);/* variabila din css-ul general*/
+	padding-right: var(--padding-intern);
+}
+
+#galerie-animata{
+	width:300px;
+	height:300px;
+	border:4px inset $setare-server;
+	position:relative;
+	overflow:hidden;
+	margin-bottom:5rem;
+}
+
+#galerie-animata figcaption {
+    position: absolute;
+    top:0px;
+    background: rgba(255, 255, 255, 0.7);
+    width: 100%;
+    text-align: center;
+}
+
+
+#galerie-animata{
+
+	figure {
+    position: absolute;
+    // left: -40px;
+    // top: -16px;
+    z-index: 0;
+    margin: 0%;
+	overflow: hidden;
+    animation-name: gal_exemplu;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-fill-mode: forwards;
+    animation-duration: 21s;
+    transform-origin: center center;
+	}
+	&:hover{
+		figure{
+			animation-play-state: paused;
+			
+		}
+	}
+	
+}
+
+$nrimag: 4 + random(7);
+
+@for $a from $nrimag through 1 {
+	#galerie-animata figure:nth-of-type(#{$a}) {
+		animation-delay: (3*($nrimag - $a)) + s;
+	}
+}
+
+
+
+
+@keyframes gal_exemplu{ 
+	0% {z-index:10;opacity:1;} /*perioada 0-5% in care se afiseaza fara efect */
+	7.142857% {transform:$transformare_i;}
+	12%{opacity:1;border-radius: 50%; transform:$transformare_f;} /* de  aici doresc sa descresc si opacitatea;*/
+	14.285714%{z-index:10; transform: rotate(45deg) scale(0.4);}
+	14.285715%{ opacity: 0;}/* il ascund cat mai in spate sa nu vina peste imaginile care erau mai sus in html decat el*/
+	20%{z-index: -10; transform: $transformare_i; }
+	85.714287%{opacity:0;transform:$transformare_i;z-index:-10;}	
+	85.714288%{z-index:0;}/*setez z-index la 0 ca sa revina la ordinea normala de afisare*/
+	100%{opacity:1;z-index:0;}
+}
+
+
+@keyframes round {
+    0%{
+        border-radius: 0%;
+    }
+    100%{
+        border-radius: 50%;
+    }
+    
+}
+@media screen and (max-width:1200px){
+	#sectiune-galerie-animata{
+		display: none;
+	}
+}
