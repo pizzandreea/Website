@@ -1,0 +1,74 @@
+#table {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  
+}
+
+/* #table-container{
+  min-width: 600px;
+} */
+
+#t01 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  counter-set: ct-pasari 12 ;
+  --no-bird:"No.";
+}
+
+#t01 tr:nth-child(2){
+  counter-increment: ct-pasari -1;
+}
+
+#t01 tr:nth-child(n+1):hover{
+    background-color: var(--menucolor);
+}
+
+#t01 tr:nth-child(n+1){
+  counter-increment: ct-pasari -1;
+}
+
+/* #t01 tr:nth-child(12){
+  counter-reset: ct-pasari;
+} */
+
+#t01, th, td {
+    /* border: 1px solid var(--headercolor); */
+    border-collapse: separate;
+    
+    margin:1px;
+  }
+th, td {
+    padding: 0.2rem;
+    text-align: left;
+    text-align: center;
+    border:1px solid var(--headercolor);  
+    min-width: 100px;
+  }
+  #t01 tr:nth-child(even) {
+    background-color: var(--highlightcolor);
+  }
+
+  #t01 tr:nth-child(odd) {
+   background-color: var(--cl-marcare);
+  }
+
+  #t01 th {
+    background-color: var(--menucolor);
+    color: white;
+  }
+
+  #t01 tr td:first-child{
+    background:var(--footercolor);
+}
+
+  #t01 tr td:first-child::before{
+    content:var(--no-bird) counter(ct-pasari);
+  }
+
+  #t01 tr:nth-child(n+1):hover td{
+    background: var(--menucolor);   
+}

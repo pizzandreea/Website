@@ -1,0 +1,26 @@
+.controls button[data-state="subtitles"] {
+    height:85%;
+    text-indent:0;
+    font-size:16px;
+    font-size:1rem;
+    font-weight:bold;
+    color:rgb(216, 8, 8);
+    background-color: linear-gradient(to right, rgb(255, 22, 6) rgb(1, 31, 51));
+    border-radius:2px;
+  }
+  
+  video{
+    width:50vw;
+  
+  }
+
+  
+
+  video::cue{
+    color: var(--headercolor);
+    
+    background:white;
+    background-clip: padding-box;
+    
+  }
+

@@ -1,0 +1,14 @@
+body.dark-theme {
+   
+    --backgroundcolor: #494841;	
+    --highlightcolor:  #252525;
+    --headercolor: #000000;
+    --menucolor: rgb(18, 60, 61);
+    --footercolor:#434e4a;
+    --cl-marcare: #838383;
+    --bordercolor: #776d4d;
+    --textcolor: white;
+    --whilecolor: black;
+    
+    
+}

@@ -1,0 +1,30 @@
+html {
+    font-size: 11px;
+}
+
+body {
+    --body-padding:0px;
+    margin: 0;
+}
+
+h1 {
+    text-align: center;
+}
+
+.grid {
+    /* display: block; */
+
+    grid-template-areas: "welcome"
+                         "about "  
+                         "layout_3"
+                         "layout_4"
+                         "table  " 
+                         "layout_5"
+                         " layout_6"
+                         "layout_7";
+}
+
+#table-container{
+  min-width: 600px;
+}
+
