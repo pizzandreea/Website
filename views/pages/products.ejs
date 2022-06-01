@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    
+    <meta
+      name="description"
+      content="Petshop Rare Birds, Accesories and Quizes"
+    />
+    <meta
+      name="keywords"
+      content="Petshop, Rare, Bird, Quiz, Extinct, Conservation"
+    />
+    <link rel="stylesheet" href="/resurse/css/products.css" type="text/css" />
+    
+    <script type="text/javascript" src=/resurse/js/products.js></script>
+    <title>On the brink</title>
+    <%- include("../fragments/head") %>
+    <script>
+      window.onload = function(){
+
+        let btn = document.getElementById("filtration");
+        btn.onclick = function(){
+          let inp = document.getElementById("inp-price");
+          let maxprice = inp.value
+
+          inp = document.getElementById("inp-age");
+          let minage = inp.value
+
+          inp = document.getElementById("inp-type");
+          let btype = inp.value
+        
+
+          var products = document.getElementsByClassName("product");
+          for(let prod of products){
+            prod.style.display = "none";
+
+            let price = parseInt(prod.getElementsByClassName("val-price")[0].innerHTML)
+            let condition1 = price <= maxprice
+            
+            let age = parseInt(prod.getElementsByClassName("val-age")[0].innerHTML)
+            let condition2 = age >= minage
+
+            // let type = parseInt(prod.getElementsByClassName("val-type")[0].innerHTML)
+            // let condition3 = type == btype
+            
+            let conditionfinale = condition1 && condition2
+            if(conditionfinale)
+              prod.style.display="grid";
+          }
+        }
+
+        btn = document.getElementById("reset");
+        btn.onclick = function(){
+          
+          var products = document.getElementsByClassName("product");
+
+          let inp = document.getElementById("inp-price");
+          inp.value = 200;
+
+          inp = document.getElementById("inp-age");
+          inp.value = 1;
+
+          inp = document.getElementById("inp-type");
+          inp.value = "all";
+
+          for(let prod of products){
+            prod.style.display = "grid";
+          }
+        }
+      }
+    </script>
+  </head>
+
+  <body>
+    <%- include("../fragments/header") %>
+    <main>
+      <label>Maximum Price: <input type="text" id = "inp-price" value = "200" ></label>
+      <label>Minimum Age: <input type="range" id = "inp-age" value = "1" min = "0" max = "5" ></label>
+      <button id = "filtration">Filter</button>
+      <button id = "reset">Reset</button>
+      <label>Simple select:
+          <select id = "inp-type">
+            <option value = "all">All</option>
+            <% for( let ntype of locals.types) { %>
+              <option value="<%- ntype.type %>"><%- ntype.type %></option>
+            <% } %> 
+          </select>
+      </label>
+      <section class="products">
+        <h2 id = "title">Birds</h2>
+        <div class="grid-products">
+              
+            <% for (let prod of locals.products) {%>
+              <article class = "product">
+                <h3 class = "name ">Name: <a href = "/product?id=<%- prod.id %>"><span class = "val-nume"><%-prod.name %></span></a></h3>
+              
+                <table class = "info-prod">
+                  <tr>
+                    <td class = "price">Price:</td> <td><span class = "val-price"><%-prod.price %></span></td>
+                  </tr>
+                  <tr>
+                    <td class = "color">Color: </td><td><span class = "val-color"><%-prod.color %></span></td>
+                  </tr>
+                  <tr>
+                    <td class = "food">Food: </td><td><span class = "val-food"><%-prod.food %></span></td>
+                  </tr>
+                  <tr>
+                    <td class = "age">Age: </td><td><span class = "val-age"><%-prod.age %></span></td>
+                  </tr>
+                  <tr>  
+                    <time class = "date"> <td>Date Rescued: </td><td><span class = "val-date"><%-prod.date_added %></span></td></time>
+                  </tr>
+                  <tr>
+                    <td class = "endangered">Endangered: </td><td><span class = "val-endangered"><%-prod.endangered %></span></td>
+                  </tr>
+                </table>
+                <figure>
+                    <img class = "img_prod" src = "/resurse/imagini/products/<%-prod.imag %>"  alt = "[imagine <%-prod.nume %>]"/>
+                </figure>    
+                    <p class = "description">Description: <span class = "val-description"><%-prod.description %></span></p>
+                    <p class = "type">Type: <span class = "val-type"><%-prod.type_bird %></span></p>
+              </article> 
+          
+            <% } %>
+            
+            </div>
+         
+      </section>
+  
+    
+    </main>
+  
+
+    <%- include("../fragments/footer") %>
+  </body>
+
+  <div class="banner">
+    This is a school project
+  </div>
+</html>

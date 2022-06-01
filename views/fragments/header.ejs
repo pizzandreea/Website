@@ -1,41 +1,82 @@
 <header>
     <h1 id="title">On the brink</h1>
+    <p id="switch"><button class="theme-switcher" ><i class="far fa-sun" style="font-size: 50px;
+      color:var(--textcolor)" ></i></button></p>
+    <script>
+      // const btn = document.querySelector(".theme-switcher");
+
+      // btn.addEventListener("click", function () {
+      //   document.body.classList.toggle("dark-theme");
+      // });
+      // Select the button
+      const btn = document.querySelector(".theme-switcher");
+      // Select the theme preference from localStorage
+      const currentTheme = localStorage.getItem("theme");
+
+      // If the current theme in localStorage is "dark"...
+      if (currentTheme == "dark") {
+        // ...then use the .dark-theme class
+        document.body.classList.add("dark-theme");
+      }
+
+    // Listen for a click on the button 
+      btn.addEventListener("click", function() {
+        // Toggle the .dark-theme class on each click
+        document.body.classList.toggle("dark-theme");
+        
+        // Let's say the theme is equal to light
+        let theme = "light";
+        // If the body contains the .dark-theme class...
+        if (document.body.classList.contains("dark-theme")) {
+          // ...then let's make the theme dark
+          theme = "dark";
+        }
+        // Then save the choice in localStorage
+        localStorage.setItem("theme", theme);
+      });
+
+    </script>
   </header>
 
-  <nav>
-    <label id="small_menu" for="ch_menu">
-      <img src="resurse\imagini\Hamburger_icon.svg.png" alt="menu" />
-    </label>
-    <input id="ch_menu" type="checkbox" />
-    <ul class="menu">
-      <li class="dropdown">
-        <div >
-          <a href = "index"><i class="fas fa-home fa-lg icon"></i><span class="home">Home</span></a>
-        </div>
-        <ul>
-          <li class="item-1"><a href="/index#welcome">Welcome</a></li>
-          <li class="item-2"><a href="/index#about">About</a></li>
-          <li class="item-3"><a href="/index#table">Table</a></li>
-        </ul>
-      </li>
-      <li><a href="register">Register</a></li>
-      <li><a href="quiz">Quiz</a></li>
-      <li class="dropdown">
-        <div><a href = "info">Info</a></div>
-        <ul>
-          <li class="item-1"><a href = "gallery">Gallery</a></li>
-          <!-- <li class="item-2"><a href="#">Accessories</a></li>
-          <li class="item-3"><a href="#">Food</a></li> -->
-        </ul>
-      </li>
-      <li class="dropdown">
-        <div><a href = "shop">Shop</a></div>
-        <ul>
-          <li class="item-1"><a href="#">Birds</a></li>
-          <li class="item-2"><a href="#">Accessories</a></li>
-          <li class="item-3"><a href="#">Food</a></li>
-        </ul>
-      </li>
-      <li><a href="contact">Contact</a></li>
-    </ul>
-  </nav>
+<nav>
+  <label id="small_menu" for="ch_menu">
+    <img src="/resurse/imagini/Hamburger_icon.svg.png" alt="menu" />
+  </label>
+  <input id="ch_menu" type="checkbox" />
+  <ul class="menu">
+    <li class="dropdown">
+      <div >
+        <a href = "index"><i class="fas fa-home fa-lg icon"></i><span class="home">Home</span></a>
+      </div>
+      <ul>
+        <li class="item-1"><a href="/index#welcome">Welcome</a></li>
+        <li class="item-2"><a href="/index#about">About</a></li>
+        <li class="item-3"><a href="/index#table">Table</a></li>
+      </ul>
+    </li>
+    <li><a href="register">Register</a></li>
+    <li><a href="quiz">Quiz</a></li>
+    <li class="dropdown">
+      <div><a href = "info">Info</a></div>
+      <ul>
+        <li class="item-1"><a href = "gallery">Gallery</a></li>
+        <!-- <li class="item-2"><a href="#">Accessories</a></li>
+        <li class="item-3"><a href="#">Food</a></li> -->
+      </ul>
+    </li>
+    <li class="dropdown">
+      <div><a href = "shop">Shop</a></div>
+      <ul>
+        <li class="item-1"><a href="products">All</a></li>
+       
+        <li class="item-2"><a href="products?type=tropical">Tropical</a></li>
+        <li class="item-3"><a href="products?type=rainforest">Rainforest</a></li>
+        <li class="item-4"><a href="products?type=coastal">Coastal</a></li>
+        <li class="item-3"><a href="products?type=woodland">Woodland</a></li>
+      </ul>
+    </li>
+    <li><a href="contact">Contact</a></li>
+  </ul>
+</nav>
+
+<p id="watermark">\</p> 

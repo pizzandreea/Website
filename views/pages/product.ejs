@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    
+    <meta
+      name="description"
+      content="Petshop Rare Birds, Accesories and Quizes"
+    />
+    <meta
+      name="keywords"
+      content="Petshop, Rare, Bird, Quiz, Extinct, Conservation"
+    />
+    <link rel="stylesheet" href="/resurse/css/product.css" type="text/css" />
+    
+    
+    <title>On the brink</title>
+    <%- include("../fragments/head") %>
+  </head>
+
+  <body>
+    <%- include("../fragments/header") %>
+    <main>
+        <section class="grid-products">   
+          <article class = "product">
+            <h3 class = "name ">Name: <a"><span class = "val-nume"> <%- locals.prod.name %></span></a></h3>
+            <table class = "info-prod">
+              <tr>
+                <td class = "price">Price:</td> <td><span class = "val-price"> <%-locals.prod.price %></span></td>
+              </tr>
+              <tr>
+                <td class = "color">Color: </td><td><span class = "val-color"><%-locals.prod.color %></span></td>
+              </tr>
+              <tr>
+                <td class = "age">Age: </td><td><span class = "val-age"><%-locals.prod.age %></span></td>
+              </tr>
+              <tr>
+                <td class = "food">Food: </td><td><span class = "val-food"><%-locals.prod.food %></span></td>
+              </tr>
+              <tr>
+                <td class = "gender">Gender: </td><td><span class = "val-gender"><%-locals.prod.gender %></span></td>
+              </tr>
+              <tr>  
+                <time class = "date"> <td>Date Rescued: </td><td><span class = "val-date"><%-locals.prod.date_added %></span></td></time>
+              </tr>
+              <tr>
+                <td class = "endangered">Endangered: </td><td><span class = "val-endangered"><%-locals.prod.endangered %></span></td>
+              </tr>
+            </table>
+            <figure>
+                <img src = "/resurse/imagini/products/<%-prod.imag %>" alt = "[imagine <%-prod.nume %>]"/>
+            </figure>    
+                <p class = "description">Description: <span class = "val-description"><%-prod.description %></span></p>
+                <p class = "category">Category: <span class = "val-category"><%-prod.categ_bird %></span></p>
+                <p class = "type">Type: <span class = "val-type"><%-prod.type_bird %></span></p>
+              </article> 
+        </section>
+  
+    
+      </main>
+  
+
+    <%- include("../fragments/footer") %>
+  </body>
+
+  <div class="banner">
+    This is a school project
+  </div>
+</html>

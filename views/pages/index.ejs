@@ -19,11 +19,17 @@
       href="/resurse/css/galerie-animata.css"
       type="text/css"
     />
+    <link
+      rel="stylesheet"
+      href="/resurse/css/video.css"
+      type="text/css"
+    />
   </head>
 
   <body>
     <%- include("../fragments/header") %>
     <main>
+
       <div class="grid">
         <section id="welcome">
           <h2>Welcome to our website!</h2>
@@ -110,7 +116,7 @@
             <div class="iframes">
               <div class="container">
               <iframe name = "video"  src = "https://www.youtube.com/embed/9l8IAvMQpTU" frameborder=0 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-            </div>
+              </div>
 
               <div class="tabs-iframe">
                 <a class="tab" href="https://www.youtube.com/embed/6TCy2MkmakA" target ="video"><div>10 Rarest Birds on Earth</div></a>
@@ -119,9 +125,20 @@
                 
               </div>
             </div>
+            
+            <div id="stil-video">
+                <video width="640" height="400" controls preload="metadata" poster="/resurse/imagini/feathers.jpg">
+                    <source src="resurse/video/Why parrots can talk like humans.mp4" type="video/mp4">
+                    <source src="resurse/video/Why parrots can talk like humans.ogv" type="video/ogv">
+                    <track class = "track" label="Romana" kind="captions" srclang="ro" src="/resurse/video/tracks/captions-video-ro.vtt" default>
+                    <track class = "track" label="English" kind="captions" srclang="en" src="/resurse/video/tracks/captions-video.vtt">
+                </video>
+            </div>
+                 
+
             <section>
               <h4>Current Data</h4>
-                  <a href="https://www.rspb.org.uk/our-work/conservation/satellite-tracking-birds/" target="_blank">Satellite Tracking Birds</a>
+                  <a class = "link" href="https://www.rspb.org.uk/our-work/conservation/satellite-tracking-birds/" target="_blank">Satellite Tracking Birds</a>
                   <details>
                       <summary>Top ten rarest birds</summary>
                       <ol>
@@ -290,7 +307,7 @@
         </div>
         <div id="layout_6">
           <!-- date despre utilizatori -->
-          <%= adresa %>
+          <h2>The user's ip is  <%= adresa %>  </h2>
         </div>
 
         <div id="layout_7">
